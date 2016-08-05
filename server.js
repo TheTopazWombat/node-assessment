@@ -18,37 +18,37 @@ app.get('/api/users', function(req, res, next) {
       });
       res.json(results);
   } else if (req.query.age){
-    var results = [];
+    var results2 = [];
     users.forEach(function(currentVal) {
         if (currentVal.age == req.query.age) {
             results.push(currentVal);
         }
     });
-    res.json(results);
+    res.json(results2);
   } else if (req.query.city) {
-    var results = [];
+    var results3 = [];
     users.forEach(function(currentVal) {
         if (currentVal.city == req.query.city) {
             results.push(currentVal);
         }
     });
-    res.json(results);
+    res.json(results3);
   } else if (req.query.state) {
-    var results = [];
+    var results4 = [];
     users.forEach(function(currentVal) {
         if (currentVal.state == req.query.state) {
             results.push(currentVal);
         }
     });
-    res.json(results);
+    res.json(results4);
   } else if (req.query.gender) {
-    var results = [];
+    var results5 = [];
     users.forEach(function(currentVal) {
         if (currentVal.gender == req.query.gender) {
             results.push(currentVal);
         }
     });
-    res.json(results);
+    res.json(results5);
   }
   else {
       res.json(users);
